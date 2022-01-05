@@ -1,0 +1,48 @@
+Console.WriteLine("2 Sayı Arasındaki Tam Sayıları Yazdıran Program");
+Console.WriteLine("-----------------------------------------------");
+
+while (true)
+{
+    Console.WriteLine("1.Sayıyı Giriniz");
+    int sayi1 = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("2.Sayıyı Giriniz");
+    int sayi2 = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("-----------------------------------------------");
+    if (sayi1 == sayi2)
+    {
+        Console.WriteLine("Aynı sayıyı girdiniz.Lütfen farklı sayılar girin.");
+    }
+    else if (sayi1 > sayi2)
+    {
+        for (int i = sayi2 + 1; i < sayi1; i++)
+        {
+            Console.WriteLine(i);
+        }
+    }
+    else
+    {
+        for (int i1 = sayi1 + 1; i1 < sayi2; i1++)
+        {
+            Console.WriteLine(i1);
+        }
+    }
+    Console.WriteLine("Uygulamadan Çıkmak için q'ya,Kullanmaya Devam Etmek İçin e'ye basınız");
+    string secim=Console.ReadLine();
+    switch (secim)
+    {
+        case "q":
+            Console.WriteLine("Çıkmayı Seçtiniz");
+            Thread.Sleep(2000);
+            Environment.Exit(0);
+            break;
+        case "e":
+            Console.WriteLine("Kullanmaya Devam Etmeyi Seçtiniz");
+            break;
+        default:
+            Console.WriteLine("Yanlış Seçim Yaptınız-Uygulamadan Çıkılıyor");
+            Thread.Sleep(2000);
+            Environment.Exit(0);
+            break;
+    }
+}
+Console.ReadKey();
