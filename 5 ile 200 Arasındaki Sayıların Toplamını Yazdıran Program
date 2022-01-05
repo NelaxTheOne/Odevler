@@ -1,0 +1,13 @@
+Console.WriteLine("5 ile 200 Arasındaki Tek Sayıları Toplayıp Yazdıran Program");
+Console.WriteLine("===========================================================");
+int toplam = 0;
+for (int i = 5; i < 200; i++)
+{
+    int kalan = i % 2;
+    if (kalan==1)
+    {
+        toplam = toplam + i;
+    }
+}
+Console.WriteLine("5 ve 200 arası tek sayıların toplamı = "+toplam);
+Console.ReadLine();
